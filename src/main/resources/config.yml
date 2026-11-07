@@ -1,0 +1,96 @@
+# ВСЕ значения можно менять. После правки: /ts reload
+#
+# stats (характеристики, пока предмет в ЛЕВОЙ руке):
+#   damage     - урон (+/- к атаке)
+#   health     - максимальное здоровье в HP (2 HP = 1 сердце)
+#   armor      - броня (очки брони)
+#   toughness  - прочность (твёрдость) брони
+#   speed      - скорость в процентах (15 = +15%)
+# Любую строку можно убрать или поставить 0.
+#
+# item-model - модель из ресурспака (TotemSpheres-ResourcePack.zip).
+# Текст поддерживает MiniMessage: <red>, <gold>, <gradient:red:blue> ...
+
+# Автоматически добавлять в описание строки с характеристиками
+auto-lore: true
+
+# (необязательно) обычные эффекты зелий для предметов: effects: ["speed:1"]
+effect-duration-ticks: 260
+
+spheres:
+  king:
+    material: RAW_GOLD
+    item-model: "totemspheres:sphere_king"
+    name: "<yellow>Сфера короля"
+    lore: ["<dark_gray>Держите в левой руке"]
+    stats: { damage: 2, armor: 2 }
+  fang:
+    material: EMERALD
+    item-model: "totemspheres:sphere_fang"
+    name: "<green>Сфера клыка"
+    lore: ["<dark_gray>Держите в левой руке"]
+    stats: { speed: 10, armor: 2, health: -2 }
+  gust:
+    material: COPPER_INGOT
+    item-model: "totemspheres:sphere_gust"
+    name: "<gold>Сфера порыва"
+    lore: ["<dark_gray>Держите в левой руке"]
+    stats: { damage: -2, speed: 25, health: 3 }
+  destroyer:
+    material: AMETHYST_SHARD
+    item-model: "totemspheres:sphere_destroyer"
+    name: "<dark_purple>Сфера разрушителя"
+    lore: ["<dark_gray>Держите в левой руке"]
+    stats: { damage: 3, health: -2, speed: 15 }
+  risk:
+    material: DIAMOND
+    item-model: "totemspheres:sphere_risk"
+    name: "<aqua>Сфера риска"
+    lore: ["<dark_gray>Держите в левой руке"]
+    stats: { damage: 4, armor: -3, toughness: -3 }
+  agony:
+    material: BLAZE_POWDER
+    item-model: "totemspheres:sphere_agony"
+    name: "<red>Сфера агонии"
+    lore: ["<dark_gray>Держите в левой руке"]
+    stats: { health: 4, damage: 4, toughness: 2, speed: 15 }
+
+# Талисманы = тотемы: характеристики в левой руке + воскрешение при смерти.
+# death-effects (необязательно): ["regeneration:2:20"] = эффект:уровень:секунды
+totems:
+  berserk:
+    material: TOTEM_OF_UNDYING
+    item-model: "totemspheres:talisman_berserk"
+    name: "<dark_red>Талисман Берсерка"
+    lore: ["<dark_gray>Держите в левой руке", "<dark_gray>Воскрешает при смерти"]
+    stats: { damage: 4, speed: 15, health: -3, armor: -2 }
+  smith:
+    material: TOTEM_OF_UNDYING
+    item-model: "totemspheres:talisman_smith"
+    name: "<#c87832>Талисман Кузнеца"
+    lore: ["<dark_gray>Держите в левой руке", "<dark_gray>Воскрешает при смерти"]
+    stats: { armor: 2, damage: 2, health: -4 }
+  dominator:
+    material: TOTEM_OF_UNDYING
+    item-model: "totemspheres:talisman_dominator"
+    name: "<light_purple>Талисман Доминатора"
+    lore: ["<dark_gray>Держите в левой руке", "<dark_gray>Воскрешает при смерти"]
+    stats: { health: 4, damage: 4, armor: 2, speed: 15 }
+  terpil:
+    material: TOTEM_OF_UNDYING
+    item-model: "totemspheres:talisman_terpil"
+    name: "<blue>Талисман Терпил"
+    lore: ["<dark_gray>Держите в левой руке", "<dark_gray>Воскрешает при смерти"]
+    stats: { armor: 3, toughness: 3, speed: -15 }
+  phantom:
+    material: TOTEM_OF_UNDYING
+    item-model: "totemspheres:talisman_phantom"
+    name: "<aqua>Талисман Фантома"
+    lore: ["<dark_gray>Держите в левой руке", "<dark_gray>Воскрешает при смерти"]
+    stats: { damage: 3, speed: 10, armor: -1 }
+  runner:
+    material: TOTEM_OF_UNDYING
+    item-model: "totemspheres:talisman_runner"
+    name: "<green>Талисман Бегуна"
+    lore: ["<dark_gray>Держите в левой руке", "<dark_gray>Воскрешает при смерти"]
+    stats: { health: 2, armor: -3, speed: 40 }
