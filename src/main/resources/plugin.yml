@@ -1,0 +1,15 @@
+name: TotemSpheres
+version: '1.0.0'
+main: dev.totemspheres.TotemSpheresPlugin
+api-version: '26.3'
+description: Custom totems and spheres with potion effects
+commands:
+  totemspheres:
+    aliases: [ts]
+    description: Manage totems and spheres
+    usage: /<command> <give|list|reload>
+    permission: totemspheres.admin
+permissions:
+  totemspheres.admin:
+    description: Access to /totemspheres
+    default: op
